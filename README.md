@@ -4,15 +4,6 @@ Um site pessoal para guardar fotos (com legenda), textos e recados, com um
 fundo de origamis caindo. Feito com **HTML, CSS e JavaScript** no front-end,
 e um **servidor em C puro** (sem frameworks) como backend opcional.
 
-## Login
-
-O site agora pede login antes de mostrar qualquer conteúdo. Só existem
-dois usuários, fixos no código (`script.js`, no topo):
-
-| usuário   | senha       |
-|-----------|-------------|
-| amanda    | geladeira   |
-| caetano   | roxo        |
 
 **Fotos e textos são separados por perfil** — cada um só vê os seus.
 **Os recados são compartilhados**: os dois veem o mesmo mural, e cada
