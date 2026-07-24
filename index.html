@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memórias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="origami-layer"></div>
+
+<!-- TELA DE LOGIN -->
+<div class="tela-login" id="tela-login">
+  <form class="caixa-login" id="form-login">
+    <span class="eyebrow">um caderno de recortes</span>
+    <h1>Memórias</h1>
+    <div class="campo">
+      <label for="login-usuario">Usuário</label>
+      <input type="text" id="login-usuario" autocomplete="username" autofocus>
+    </div>
+    <div class="campo">
+      <label for="login-senha">Senha</label>
+      <input type="password" id="login-senha" autocomplete="current-password">
+    </div>
+    <button class="btn" type="submit">Entrar</button>
+    <div class="status-msg" id="status-login"></div>
+  </form>
+</div>
+
+<div class="wrap" id="app" hidden>
+  <header class="topo">
+    <span class="eyebrow">um caderno de recortes</span>
+    <h1>Memórias</h1>
+    <p>fotos, palavras e recados guardados aqui</p>
+    <p class="usuario-logado">
+      logado como <strong id="nome-usuario"></strong> ·
+      <button class="link-sair" id="btn-sair">sair</button>
+    </p>
+  </header>
+
+  <nav class="abas">
+    <button class="aba-btn ativa" data-aba="fotos">Fotos</button>
+    <button class="aba-btn" data-aba="textos">Textos</button>
+    <button class="aba-btn" data-aba="recados">Recados</button>
+  </nav>
+
+  <!-- FOTOS -->
+  <section class="painel ativo" id="painel-fotos">
+    <div class="caixa-add">
+      <h3>Adicionar foto</h3>
+      <div class="campo">
+        <label for="foto-arquivo">Imagem</label>
+        <input type="file" id="foto-arquivo" accept="image/*">
+      </div>
+      <div class="campo">
+        <label for="foto-legenda">Legenda</label>
+        <input type="text" id="foto-legenda" placeholder="ex: tarde de sol na Paulista">
+      </div>
+      <button class="btn" id="btn-add-foto">Guardar foto</button>
+      <div class="status-msg" id="status-foto"></div>
+    </div>
+    <div class="mural" id="mural-fotos"></div>
+  </section>
+
+  <!-- TEXTOS -->
+  <section class="painel" id="painel-textos">
+    <div class="caixa-add">
+      <h3>Escrever um texto</h3>
+      <div class="campo">
+        <label for="texto-titulo">Título</label>
+        <input type="text" id="texto-titulo" placeholder="ex: o que senti hoje">
+      </div>
+      <div class="campo">
+        <label for="texto-conteudo">Texto</label>
+        <textarea id="texto-conteudo" placeholder="escreva aqui..."></textarea>
+      </div>
+      <button class="btn secundario" id="btn-add-texto">Salvar texto</button>
+      <div class="status-msg" id="status-texto"></div>
+    </div>
+    <div id="lista-textos"></div>
+  </section>
+
+  <!-- RECADOS -->
+  <section class="painel" id="painel-recados">
+    <div class="caixa-add">
+      <h3>Deixar um recado</h3>
+      <p class="dica-recado">visível para vocês dois</p>
+      <div class="campo">
+        <label for="recado-msg">Recado</label>
+        <textarea id="recado-msg" placeholder="deixe uma mensagem..."></textarea>
+      </div>
+      <button class="btn" id="btn-add-recado">Deixar recado</button>
+      <div class="status-msg" id="status-recado"></div>
+    </div>
+    <div class="mural-recados" id="mural-recados"></div>
+  </section>
+
+  <footer class="rodape">feito para durar</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
